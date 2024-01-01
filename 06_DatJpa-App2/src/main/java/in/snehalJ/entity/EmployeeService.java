@@ -19,6 +19,14 @@ public class EmployeeService {
 
 	}
 
+	public void getEmpsBySalary(float salary) {
+		
+		List<Employee> emps = empRepo.findByEmpSalaryGreaterThanEqual(salary);
+		emps.forEach(System.out::println);
+		
+	}
+	
+
 	
 	public void getEmpsByGenderAndDept(String gender,String dept) {
 		List<Employee> emps = empRepo.findByEmpGenderAndEmpDept(gender, dept);
