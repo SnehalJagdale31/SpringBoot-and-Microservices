@@ -18,4 +18,7 @@ public interface EmployeeRepo extends CrudRepository<Employee, Integer> {
 	
 	//select * from employee where emp_gender =:Male and emp_dept = :sales
 	public List <Employee> findByEmpGenderAndEmpDept(String gender,String dept);
+
+	//select * from employee where emp_salary >500;
+	public List <Employee> findByEmpSalaryGreaterThanEqual(float salary);
 }
