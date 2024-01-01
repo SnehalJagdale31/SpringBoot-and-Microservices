@@ -18,7 +18,8 @@ public class Application {
 //		employeeService.getAllEmps();
 //		employeeService.getEmpsByDept("Sales");
 //		employeeService.getEmpsByGender("Male");
-		employeeService.getEmpsByGenderAndDept("Male","Sales");
+//	        employeeService.getEmpsByGenderAndDept("Male","Sales");
+		employeeService.getEmpsBySalary(2000);
 	}
 
 }
