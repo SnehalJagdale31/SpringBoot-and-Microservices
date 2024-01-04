@@ -22,6 +22,13 @@ public interface EmployeeRepo extends CrudRepository<Employee, Integer> {
 	//select * from employee where emp_salary >500;
 	public List <Employee> findByEmpSalaryGreaterThanEqual(float salary);
 
+	//creating custom query using annotation
+	@Query("from Employee")
+	public List<Employee> getAllEmpRecord();
+	
+	@Query("from Employee where empId = :id")
+	public List<Employee> getEmpById(Integer id) ;
+	
 	@Transactional
 	@Modifying
 	@Query("delete from Employee where empId =:eid")
