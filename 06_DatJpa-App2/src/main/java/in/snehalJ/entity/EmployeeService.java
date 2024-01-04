@@ -19,6 +19,12 @@ public class EmployeeService {
 
 	}
 
+	 public void deleteEmp(Integer eid) {
+		
+		 empRepo.deleteEmp(eid);
+		
+	}
+
 	public void getEmpsBySalary(float salary) {
 		
 		List<Employee> emps = empRepo.findByEmpSalaryGreaterThanEqual(salary);
