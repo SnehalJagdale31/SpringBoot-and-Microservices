@@ -21,4 +21,9 @@ public interface EmployeeRepo extends CrudRepository<Employee, Integer> {
 
 	//select * from employee where emp_salary >500;
 	public List <Employee> findByEmpSalaryGreaterThanEqual(float salary);
+
+	@Transactional
+	@Modifying
+	@Query("delete from Employee where empId =:eid")
+	public void deleteEmp(Integer eid);
 }
