@@ -20,6 +20,9 @@ public class Application {
 //		employeeService.getEmpsByGender("Male");
 	        employeeService.getEmpsByGenderAndDept("Male","Sales");
 //		employeeService.getEmpsBySalary(2000);
+		employeeService.getAllEmpRecord();
+		employeeService.getEmpById(101);
+		employeeService.deleteEmp(105);
 	}
 
 }
