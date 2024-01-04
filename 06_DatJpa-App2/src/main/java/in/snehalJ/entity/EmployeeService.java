@@ -19,6 +19,19 @@ public class EmployeeService {
 
 	}
 
+	public void getEmpById(Integer id) {
+		List<Employee> empById =empRepo.getEmpById(id);
+		System.out.println(empById);
+	}
+	
+
+	public void getAllEmpRecord() {
+		
+		List<Employee> emps = empRepo.getAllEmpRecord();
+		emps.forEach(System.out::println);
+		
+	}
+
 	 public void deleteEmp(Integer eid) {
 		
 		 empRepo.deleteEmp(eid);
