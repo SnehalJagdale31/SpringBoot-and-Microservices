@@ -28,7 +28,8 @@ public interface EmployeeRepo extends CrudRepository<Employee, Integer> {
 	
 	@Query("from Employee where empId = :id")
 	public List<Employee> getEmpById(Integer id) ;
-	
+
+	//deleting the record
 	@Transactional
 	@Modifying
 	@Query("delete from Employee where empId =:eid")
