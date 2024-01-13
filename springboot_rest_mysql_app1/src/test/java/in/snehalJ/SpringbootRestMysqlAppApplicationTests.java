@@ -8,6 +8,7 @@ class SpringbootRestMysqlAppApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//
 	}
 
 }
